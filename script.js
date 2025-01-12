@@ -27,8 +27,11 @@ const setNewPosition = () => {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
 
-    const position_top = getRandomPosition(screenHeight);
-    const position_left = getRandomPosition(screenWidth);
+    const buttonWidth = no_button.offsetWidth;
+    const buttonHeight = no_button.offsetHeight;
+
+    const position_top = getRandomPosition(screenHeight - buttonHeight);
+    const position_left = getRandomPosition(screenWidth - buttonWidth);
 
     no_button.style.position = "absolute";
     no_button.style.top = position_top + "px";
